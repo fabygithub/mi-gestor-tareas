@@ -5,9 +5,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HomeController {
+  @GetMapping("/")
+  public String home() {
+    return "Gestor de tareas OK. Prueba /api/ping";
+  }
 
-    @GetMapping("/")
-    public String home() {
-        return "OK";
-    }
+  @GetMapping("/api/ping")
+  public String ping() {
+    return "OK";
+  }
 }
+
+
