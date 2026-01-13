@@ -1,17 +1,13 @@
 package com.tuempresa.tuapp.controller;
 
+mport org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class HomeController {
-  @GetMapping("/")
-  public String home() {
-    return "Gestor de tareas OK. Prueba /api/ping";
-  }
 
-  @GetMapping("/api/ping")
-  public String ping() {
-    return "OK";
-  }
+    @GetMapping("/")
+    public String home() {
+        return "home"; // home.html
+    }
 }
