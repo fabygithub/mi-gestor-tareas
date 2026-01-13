@@ -5,9 +5,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HomeController {
-
-    @GetMapping("/")
-    public String home() {
-        return "Spring Boot OK 🚀";
-    }
+  @GetMapping("/ping")
+  public String ping() {
+    return "OK";
+  }
 }
